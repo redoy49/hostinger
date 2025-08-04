@@ -1,3 +1,90 @@
+:root {
+  /* Font settings */
+  --font-family-base: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 1.8rem;
+  --line-height-base: 2.4rem;
+
+  /* Text colors */
+  --text-color-body: rgba(0, 0, 0, 0.5);
+  --text-color-heading-main: #fff;
+  --text-color-heading-secondary: #121212;
+
+  /* Heading sizes */
+  --h1-size: 7.2rem;
+  --h2-size: 4rem;
+  --h3-size: 2.8rem;
+
+  /* Spacing */
+  --spacing-xs: 1.6rem;
+  --spacing-sm: 2.4rem;
+  --spacing-md: 4rem;
+
+  /* Button styles */
+  --btn-font-size: 1.4rem;
+  --btn-height: 3.6rem;
+  --btn-padding-x: 2.4rem;
+  --btn-radius: 1.8rem;
+  --btn-bg: linear-gradient(-90deg, #a65ef7 0%, #4c53ff 100%);
+  --btn-color: #fff;
+
+  /* Theme extras */
+  --color-accent: #6c48f2;
+  --color-danger: red;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
 body {
-  background: lightcyan;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color-body);
+  margin: 0;
+}
+
+h1, h2, h3 {
+  color: var(--text-color-heading-secondary);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  margin-bottom: var(--spacing-xs);
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Button component */
+.btn {
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  height: var(--btn-height);
+  padding: 0 var(--btn-padding-x);
+  font-size: var(--btn-font-size);
+  border: none;
+  border-radius: var(--btn-radius);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  outline: none;
 }
